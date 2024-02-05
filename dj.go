@@ -17,6 +17,15 @@ type Client struct {
 	HttpClient *http.Client
 }
 
+func NewClient() *Client {
+	baseUrl, _ := url.Parse("https://icanhazdadjoke.com")
+	return &Client{
+		BaseUrl:    baseUrl,
+		UserAgent:  "go-dj",
+		HttpClient: http.DefaultClient,
+	}
+}
+
 type Search struct {
 	CurrentPage  int    `json:"current_page"`
 	Limit        int    `json:"limit"`
