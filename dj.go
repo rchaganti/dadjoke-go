@@ -21,7 +21,7 @@ func NewClient() *Client {
 	baseUrl, _ := url.Parse("https://icanhazdadjoke.com")
 	return &Client{
 		BaseUrl:    baseUrl,
-		UserAgent:  "go-dj",
+		UserAgent:  "dadjoke-go",
 		HttpClient: http.DefaultClient,
 	}
 }
